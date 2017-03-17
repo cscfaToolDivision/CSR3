@@ -46,7 +46,10 @@ echo "$TEST_RES" > doc/phpcs.txt
 test "$PHP vendor/bin/phpmd src/ text ./phpmd.xml" PHPMD 100
 echo "$TEST_RES" > doc/phpmd.txt
 
-test "$PHP vendor/bin/phpcpd src/" PHPCPD 5
+test "$PHP vendor/bin/phpcpd src/" PHPCPD 1
+echo "$TEST_RES" > doc/phpcpd.txt
+
+test "$PHP vendor/bin/sami.php update samiConfig.php" SAMI 1
 echo "$TEST_RES" > doc/phpcpd.txt
 
 if [ "$STATUS" -eq 0 ]

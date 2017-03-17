@@ -1,0 +1,59 @@
+{
+    "name": "CSDT\\CSR3\\Abstracts\\AbstractCSR3PropertyDTO",
+    "line": 33,
+    "short_desc": "AbstractCSR3PropertyDTO.php",
+    "long_desc": "The AbstractCSR3PropertyDTO define the base impl\u00e9mentation of the\nCSR3DTOInterface with property definition capability",
+    "hint": null,
+    "tags": {
+        "category": [
+            [
+                "Abstract"
+            ]
+        ],
+        "package": [
+            [
+                "CSR3-DataTransferObject"
+            ]
+        ],
+        "author": [
+            [
+                "matthieu",
+                "vallance",
+                "<matthieu.vallance@cscfa.fr>"
+            ]
+        ],
+        "license": [
+            [
+                "MIT",
+                "<https:\/\/opensource.org\/licenses\/MIT>"
+            ]
+        ],
+        "link": [
+            [
+                "http:\/\/cscfa.fr"
+            ]
+        ]
+    },
+    "namespace": "CSDT\\CSR3\\Abstracts",
+    "file": "\/home\/workspace\/ToolDivision\/CSR3\/src\/CSDT\/CSR3\/Abstracts\/AbstractCSR3PropertyDTO.php",
+    "relative_file": null,
+    "hash": "1e6c0f26948c7f7245269eea67cc5ad9b1c6ee02",
+    "parent": null,
+    "modifiers": null,
+    "is_trait": false,
+    "is_interface": false,
+    "aliases": {
+        "CSR3DTOInterface": "CSDT\\CSR3\\Interfaces\\CSR3DTOInterface",
+        "CSR3PropertyDTOTrait": "CSDT\\CSR3\\Traits\\CSR3PropertyDTOTrait"
+    },
+    "errors": [],
+    "interfaces": {
+        "CSDT\\CSR3\\Interfaces\\CSR3DTOInterface": "CSDT\\CSR3\\Interfaces\\CSR3DTOInterface"
+    },
+    "traits": {
+        "CSDT\\CSR3\\Traits\\CSR3PropertyDTOTrait": "CSDT\\CSR3\\Traits\\CSR3PropertyDTOTrait"
+    },
+    "properties": [],
+    "methods": [],
+    "constants": []
+}

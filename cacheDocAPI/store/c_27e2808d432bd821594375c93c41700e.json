@@ -1,0 +1,59 @@
+{
+    "name": "CSDT\\CSR3\\Abstracts\\AbstractCSR3DTO",
+    "line": 32,
+    "short_desc": "AbstractCSR3DTO.php",
+    "long_desc": "The AbstractCSR3DTO abstract class define the basic usage of the CSR3DTOInterface",
+    "hint": null,
+    "tags": {
+        "category": [
+            [
+                "Abstract"
+            ]
+        ],
+        "package": [
+            [
+                "CSR3-DataTransferObject"
+            ]
+        ],
+        "author": [
+            [
+                "matthieu",
+                "vallance",
+                "<matthieu.vallance@cscfa.fr>"
+            ]
+        ],
+        "license": [
+            [
+                "MIT",
+                "<https:\/\/opensource.org\/licenses\/MIT>"
+            ]
+        ],
+        "link": [
+            [
+                "http:\/\/cscfa.fr"
+            ]
+        ]
+    },
+    "namespace": "CSDT\\CSR3\\Abstracts",
+    "file": "\/home\/workspace\/ToolDivision\/CSR3\/src\/CSDT\/CSR3\/Abstracts\/AbstractCSR3DTO.php",
+    "relative_file": null,
+    "hash": "60aae687223cb95f2955a929ae2776691e94355d",
+    "parent": null,
+    "modifiers": null,
+    "is_trait": false,
+    "is_interface": false,
+    "aliases": {
+        "CSR3DTOInterface": "CSDT\\CSR3\\Interfaces\\CSR3DTOInterface",
+        "CSR3DTOTrait": "CSDT\\CSR3\\Traits\\CSR3DTOTrait"
+    },
+    "errors": [],
+    "interfaces": {
+        "CSDT\\CSR3\\Interfaces\\CSR3DTOInterface": "CSDT\\CSR3\\Interfaces\\CSR3DTOInterface"
+    },
+    "traits": {
+        "CSDT\\CSR3\\Traits\\CSR3DTOTrait": "CSDT\\CSR3\\Traits\\CSR3DTOTrait"
+    },
+    "properties": [],
+    "methods": [],
+    "constants": []
+}

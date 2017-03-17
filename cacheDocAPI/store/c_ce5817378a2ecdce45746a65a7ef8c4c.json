@@ -1,0 +1,504 @@
+{
+    "name": "CSDT\\CSR3\\Traits\\CSR3PropertyDTOTrait",
+    "line": 31,
+    "short_desc": "CSR3PropertyDTOTrait.php",
+    "long_desc": "The CSR3PropertyDTOTrait allow to use custom DTO with properties as attribute",
+    "hint": null,
+    "tags": {
+        "category": [
+            [
+                "Trait"
+            ]
+        ],
+        "package": [
+            [
+                "CSR3-DataTransferObject"
+            ]
+        ],
+        "author": [
+            [
+                "matthieu",
+                "vallance",
+                "<matthieu.vallance@cscfa.fr>"
+            ]
+        ],
+        "license": [
+            [
+                "MIT",
+                "<https:\/\/opensource.org\/licenses\/MIT>"
+            ]
+        ],
+        "link": [
+            [
+                "http:\/\/cscfa.fr"
+            ]
+        ]
+    },
+    "namespace": "CSDT\\CSR3\\Traits",
+    "file": "\/home\/workspace\/ToolDivision\/CSR3\/src\/CSDT\/CSR3\/Traits\/CSR3PropertyDTOTrait.php",
+    "relative_file": null,
+    "hash": "cd1af17d6ddf1e2456f96d1c1d3b1d0449e5bd00",
+    "parent": null,
+    "modifiers": null,
+    "is_trait": true,
+    "is_interface": false,
+    "aliases": {
+        "CSR3DTOInterface": "CSDT\\CSR3\\Interfaces\\CSR3DTOInterface"
+    },
+    "errors": [],
+    "interfaces": [],
+    "traits": [],
+    "properties": {
+        "attributeContainer": {
+            "name": "attributeContainer",
+            "line": 40,
+            "short_desc": "Attribute container",
+            "long_desc": "This property store the attribute container property name",
+            "hint": [
+                [
+                    "string",
+                    false
+                ]
+            ],
+            "hint_desc": "",
+            "tags": [],
+            "modifiers": 2,
+            "default": {
+                "nodeType": "Scalar_String",
+                "value": "attributes",
+                "attributes": {
+                    "startLine": 40,
+                    "endLine": 40,
+                    "kind": 1
+                }
+            },
+            "errors": []
+        },
+        "positionContainer": {
+            "name": "positionContainer",
+            "line": 49,
+            "short_desc": "Position container",
+            "long_desc": "This property store the position container property name",
+            "hint": [
+                [
+                    "string",
+                    false
+                ]
+            ],
+            "hint_desc": "",
+            "tags": [],
+            "modifiers": 2,
+            "default": {
+                "nodeType": "Scalar_String",
+                "value": "traversingPosition",
+                "attributes": {
+                    "startLine": 49,
+                    "endLine": 49,
+                    "kind": 1
+                }
+            },
+            "errors": []
+        }
+    },
+    "methods": {
+        "setAttribute": {
+            "name": "setAttribute",
+            "line": 61,
+            "short_desc": "Set attribute",
+            "long_desc": "This method allow to set or add an attribute to the DTO",
+            "hint": [
+                [
+                    "CSDT\\CSR3\\Traits\\$this",
+                    false
+                ]
+            ],
+            "hint_desc": "",
+            "tags": [],
+            "modifiers": 1,
+            "is_by_ref": "",
+            "exceptions": [],
+            "errors": [],
+            "parameters": {
+                "attributeName": {
+                    "name": "attributeName",
+                    "line": 62,
+                    "short_desc": "The attribute to set",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "string",
+                            false
+                        ]
+                    ],
+                    "tags": [],
+                    "modifiers": "string",
+                    "default": null,
+                    "is_by_ref": false
+                },
+                "attributeValue": {
+                    "name": "attributeValue",
+                    "line": 63,
+                    "short_desc": "The value to set",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "mixed",
+                            false
+                        ]
+                    ],
+                    "tags": [],
+                    "modifiers": null,
+                    "default": null,
+                    "is_by_ref": false
+                }
+            }
+        },
+        "getAttribute": {
+            "name": "getAttribute",
+            "line": 85,
+            "short_desc": "Get attribute",
+            "long_desc": "This method allow to retreive a value from a named attribute of the DTO",
+            "hint": [
+                [
+                    "mixed",
+                    false
+                ]
+            ],
+            "hint_desc": "",
+            "tags": [],
+            "modifiers": 1,
+            "is_by_ref": "",
+            "exceptions": [],
+            "errors": [],
+            "parameters": {
+                "attributeName": {
+                    "name": "attributeName",
+                    "line": 85,
+                    "short_desc": "The name of the attribute whence return the value",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "string",
+                            false
+                        ]
+                    ],
+                    "tags": [],
+                    "modifiers": "string",
+                    "default": null,
+                    "is_by_ref": false
+                }
+            }
+        },
+        "setAttributes": {
+            "name": "setAttributes",
+            "line": 107,
+            "short_desc": "Set attributes",
+            "long_desc": "This method allow to set the attributes of the DTO from an associative array",
+            "hint": [
+                [
+                    "CSDT\\CSR3\\Traits\\$this",
+                    false
+                ]
+            ],
+            "hint_desc": "",
+            "tags": [],
+            "modifiers": 1,
+            "is_by_ref": "",
+            "exceptions": [],
+            "errors": [],
+            "parameters": {
+                "attributes": {
+                    "name": "attributes",
+                    "line": 107,
+                    "short_desc": "The associative array of attributes",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "array",
+                            false
+                        ]
+                    ],
+                    "tags": [],
+                    "modifiers": "array",
+                    "default": null,
+                    "is_by_ref": false
+                }
+            }
+        },
+        "getAttributes": {
+            "name": "getAttributes",
+            "line": 128,
+            "short_desc": "Get attributes",
+            "long_desc": "This method return the attributes as array from the DTO",
+            "hint": [
+                [
+                    "array",
+                    false
+                ]
+            ],
+            "hint_desc": "",
+            "tags": [],
+            "modifiers": 1,
+            "is_by_ref": "",
+            "exceptions": [],
+            "errors": [],
+            "parameters": []
+        },
+        "offsetExists": {
+            "name": "offsetExists",
+            "line": 158,
+            "short_desc": "Offset exist",
+            "long_desc": "This method validate the existence of an offset",
+            "hint": [
+                [
+                    "bool",
+                    false
+                ]
+            ],
+            "hint_desc": "",
+            "tags": [],
+            "modifiers": 1,
+            "is_by_ref": "",
+            "exceptions": [],
+            "errors": [],
+            "parameters": {
+                "offset": {
+                    "name": "offset",
+                    "line": 158,
+                    "short_desc": "The offset to validate",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "mixed",
+                            false
+                        ]
+                    ],
+                    "tags": [],
+                    "modifiers": null,
+                    "default": null,
+                    "is_by_ref": false
+                }
+            }
+        },
+        "offsetGet": {
+            "name": "offsetGet",
+            "line": 176,
+            "short_desc": "Offset get",
+            "long_desc": "This method return an offset value",
+            "hint": [
+                [
+                    "mixed",
+                    false
+                ]
+            ],
+            "hint_desc": "",
+            "tags": [],
+            "modifiers": 1,
+            "is_by_ref": "",
+            "exceptions": [],
+            "errors": [],
+            "parameters": {
+                "offset": {
+                    "name": "offset",
+                    "line": 176,
+                    "short_desc": "The offset whence retreive the value",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "mixed",
+                            false
+                        ]
+                    ],
+                    "tags": [],
+                    "modifiers": null,
+                    "default": null,
+                    "is_by_ref": false
+                }
+            }
+        },
+        "offsetSet": {
+            "name": "offsetSet",
+            "line": 191,
+            "short_desc": "Offset set",
+            "long_desc": "This method allow to set a value at an offset place",
+            "hint": [
+                [
+                    "void",
+                    false
+                ]
+            ],
+            "hint_desc": "",
+            "tags": [],
+            "modifiers": 1,
+            "is_by_ref": "",
+            "exceptions": [],
+            "errors": [],
+            "parameters": {
+                "offset": {
+                    "name": "offset",
+                    "line": 191,
+                    "short_desc": "The offset where set the value",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "mixed",
+                            false
+                        ]
+                    ],
+                    "tags": [],
+                    "modifiers": null,
+                    "default": null,
+                    "is_by_ref": false
+                },
+                "value": {
+                    "name": "value",
+                    "line": 191,
+                    "short_desc": "The value to inject",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "mixed",
+                            false
+                        ]
+                    ],
+                    "tags": [],
+                    "modifiers": null,
+                    "default": null,
+                    "is_by_ref": false
+                }
+            }
+        },
+        "offsetUnset": {
+            "name": "offsetUnset",
+            "line": 205,
+            "short_desc": "Offset unset",
+            "long_desc": "This method remove an offset",
+            "hint": [
+                [
+                    "void",
+                    false
+                ]
+            ],
+            "hint_desc": "",
+            "tags": [],
+            "modifiers": 1,
+            "is_by_ref": "",
+            "exceptions": [],
+            "errors": [],
+            "parameters": {
+                "offset": {
+                    "name": "offset",
+                    "line": 205,
+                    "short_desc": "The offset to remove",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "mixed",
+                            false
+                        ]
+                    ],
+                    "tags": [],
+                    "modifiers": null,
+                    "default": null,
+                    "is_by_ref": false
+                }
+            }
+        },
+        "current": {
+            "name": "current",
+            "line": 221,
+            "short_desc": "Current",
+            "long_desc": "This method return the current iterated value",
+            "hint": [
+                [
+                    "mixed",
+                    false
+                ]
+            ],
+            "hint_desc": "",
+            "tags": [],
+            "modifiers": 1,
+            "is_by_ref": "",
+            "exceptions": [],
+            "errors": [],
+            "parameters": []
+        },
+        "next": {
+            "name": "next",
+            "line": 233,
+            "short_desc": "Next",
+            "long_desc": "This method advance the internal pointer by one step",
+            "hint": [
+                [
+                    "void",
+                    false
+                ]
+            ],
+            "hint_desc": "",
+            "tags": [],
+            "modifiers": 1,
+            "is_by_ref": "",
+            "exceptions": [],
+            "errors": [],
+            "parameters": []
+        },
+        "key": {
+            "name": "key",
+            "line": 245,
+            "short_desc": "Key",
+            "long_desc": "This method return the current iterated key",
+            "hint": [
+                [
+                    "void",
+                    false
+                ]
+            ],
+            "hint_desc": "",
+            "tags": [],
+            "modifiers": 1,
+            "is_by_ref": "",
+            "exceptions": [],
+            "errors": [],
+            "parameters": []
+        },
+        "valid": {
+            "name": "valid",
+            "line": 257,
+            "short_desc": "Valid",
+            "long_desc": "This method validate the current internal position existence",
+            "hint": [
+                [
+                    "bool",
+                    false
+                ]
+            ],
+            "hint_desc": "",
+            "tags": [],
+            "modifiers": 1,
+            "is_by_ref": "",
+            "exceptions": [],
+            "errors": [],
+            "parameters": []
+        },
+        "rewind": {
+            "name": "rewind",
+            "line": 271,
+            "short_desc": "Rewind",
+            "long_desc": "This method reinitialize the internal position",
+            "hint": [
+                [
+                    "void",
+                    false
+                ]
+            ],
+            "hint_desc": "",
+            "tags": [],
+            "modifiers": 1,
+            "is_by_ref": "",
+            "exceptions": [],
+            "errors": [],
+            "parameters": []
+        }
+    },
+    "constants": []
+}

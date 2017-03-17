@@ -1,0 +1,54 @@
+{
+    "name": "CSDT\\CSR3\\CSR3GenericDTO",
+    "line": 31,
+    "short_desc": "CSR3GenericDTO.php",
+    "long_desc": "The CSR3GenericDTO is an implementation for the CSR3 base DTO",
+    "hint": null,
+    "tags": {
+        "category": [
+            [
+                "DTO"
+            ]
+        ],
+        "package": [
+            [
+                "CSR3-DataTransferObject"
+            ]
+        ],
+        "author": [
+            [
+                "matthieu",
+                "vallance",
+                "<matthieu.vallance@cscfa.fr>"
+            ]
+        ],
+        "license": [
+            [
+                "MIT",
+                "<https:\/\/opensource.org\/licenses\/MIT>"
+            ]
+        ],
+        "link": [
+            [
+                "http:\/\/cscfa.fr"
+            ]
+        ]
+    },
+    "namespace": "CSDT\\CSR3",
+    "file": "\/home\/workspace\/ToolDivision\/CSR3\/src\/CSDT\/CSR3\/CSR3GenericDTO.php",
+    "relative_file": null,
+    "hash": "7b0fe0bbb0ea72d5a8f474600a39ba75c8dd65c0",
+    "parent": "CSDT\\CSR3\\Abstracts\\AbstractCSR3DTO",
+    "modifiers": null,
+    "is_trait": false,
+    "is_interface": false,
+    "aliases": {
+        "AbstractCSR3DTO": "CSDT\\CSR3\\Abstracts\\AbstractCSR3DTO"
+    },
+    "errors": [],
+    "interfaces": [],
+    "traits": [],
+    "properties": [],
+    "methods": [],
+    "constants": []
+}

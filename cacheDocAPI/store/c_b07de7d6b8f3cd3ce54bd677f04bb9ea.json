@@ -1,0 +1,199 @@
+{
+    "name": "CSDT\\CSR3\\Interfaces\\CSR3DTOInterface",
+    "line": 30,
+    "short_desc": "CSR3DTOInterface",
+    "long_desc": "The CSR3DTOInterface define the base CSR3 data transfer object\ninterfae.",
+    "hint": null,
+    "tags": {
+        "category": [
+            [
+                "Interface"
+            ]
+        ],
+        "package": [
+            [
+                "CSR3-DataTransferObject"
+            ]
+        ],
+        "author": [
+            [
+                "matthieu",
+                "vallance",
+                "<matthieu.vallance@cscfa.fr>"
+            ]
+        ],
+        "license": [
+            [
+                "MIT",
+                "<https:\/\/opensource.org\/licenses\/MIT>"
+            ]
+        ],
+        "link": [
+            [
+                "http:\/\/cscfa.fr"
+            ]
+        ]
+    },
+    "namespace": "CSDT\\CSR3\\Interfaces",
+    "file": "\/home\/workspace\/ToolDivision\/CSR3\/src\/CSDT\/CSR3\/Interfaces\/CSR3DTOInterface.php",
+    "relative_file": null,
+    "hash": "2d06f5452736396ccd5a16b366fa61477ad49c3a",
+    "parent": null,
+    "modifiers": null,
+    "is_trait": false,
+    "is_interface": true,
+    "aliases": [],
+    "errors": [],
+    "interfaces": {
+        "ArrayAccess": "ArrayAccess",
+        "Iterator": "Iterator"
+    },
+    "traits": [],
+    "properties": [],
+    "methods": {
+        "setAttribute": {
+            "name": "setAttribute",
+            "line": 42,
+            "short_desc": "Set attribute",
+            "long_desc": "This method allow to set or add an attribute to the DTO",
+            "hint": [
+                [
+                    "CSDT\\CSR3\\Interfaces\\$this",
+                    false
+                ]
+            ],
+            "hint_desc": "",
+            "tags": [],
+            "modifiers": 1,
+            "is_by_ref": "",
+            "exceptions": [],
+            "errors": [],
+            "parameters": {
+                "attributeName": {
+                    "name": "attributeName",
+                    "line": 43,
+                    "short_desc": "The attribute to set",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "string",
+                            false
+                        ]
+                    ],
+                    "tags": [],
+                    "modifiers": "string",
+                    "default": null,
+                    "is_by_ref": false
+                },
+                "attributeValue": {
+                    "name": "attributeValue",
+                    "line": 44,
+                    "short_desc": "The value to set",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "mixed",
+                            false
+                        ]
+                    ],
+                    "tags": [],
+                    "modifiers": null,
+                    "default": null,
+                    "is_by_ref": false
+                }
+            }
+        },
+        "getAttribute": {
+            "name": "getAttribute",
+            "line": 56,
+            "short_desc": "Get attribute",
+            "long_desc": "This method allow to retreive a value from a named attribute of the DTO",
+            "hint": [
+                [
+                    "mixed",
+                    false
+                ]
+            ],
+            "hint_desc": "",
+            "tags": [],
+            "modifiers": 1,
+            "is_by_ref": "",
+            "exceptions": [],
+            "errors": [],
+            "parameters": {
+                "attributeName": {
+                    "name": "attributeName",
+                    "line": 56,
+                    "short_desc": "The name of the attribute whence return the value",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "string",
+                            false
+                        ]
+                    ],
+                    "tags": [],
+                    "modifiers": "string",
+                    "default": null,
+                    "is_by_ref": false
+                }
+            }
+        },
+        "setAttributes": {
+            "name": "setAttributes",
+            "line": 67,
+            "short_desc": "Set attributes",
+            "long_desc": "This method allow to set the attributes of the DTO from an associative array",
+            "hint": [
+                [
+                    "CSDT\\CSR3\\Interfaces\\$this",
+                    false
+                ]
+            ],
+            "hint_desc": "",
+            "tags": [],
+            "modifiers": 1,
+            "is_by_ref": "",
+            "exceptions": [],
+            "errors": [],
+            "parameters": {
+                "attributes": {
+                    "name": "attributes",
+                    "line": 67,
+                    "short_desc": "The associative array of attributes",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "array",
+                            false
+                        ]
+                    ],
+                    "tags": [],
+                    "modifiers": "array",
+                    "default": null,
+                    "is_by_ref": false
+                }
+            }
+        },
+        "getAttributes": {
+            "name": "getAttributes",
+            "line": 76,
+            "short_desc": "Get attributes",
+            "long_desc": "This method return the attributes as array from the DTO",
+            "hint": [
+                [
+                    "array",
+                    false
+                ]
+            ],
+            "hint_desc": "",
+            "tags": [],
+            "modifiers": 1,
+            "is_by_ref": "",
+            "exceptions": [],
+            "errors": [],
+            "parameters": []
+        }
+    },
+    "constants": []
+}
