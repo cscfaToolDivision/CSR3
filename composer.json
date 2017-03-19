@@ -1,5 +1,6 @@
 {
-	"name" : "cscfa_tool_division/csr3",
+	"name" : "cscfa_tool_division/csr3-dto",
+	"keywords": ["DTO", "Data Transfer Object", "cscfa", "csr"],
 	"description" : "The CSCFA csr Division PHP implementation",
 	"type" : "library",
     "autoload" : {
