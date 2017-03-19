@@ -39,7 +39,8 @@ class AbstractCSR3PropertyDTO implements CSR3DTOInterface
      *
      * This property store the attributes of the DTO
      *
-     * @var array
+     * @var                                        array
+     * @SuppressWarnings(PHPMD.UnusedPrivateField)
      */
     private $attributes = [];
 
@@ -48,7 +49,8 @@ class AbstractCSR3PropertyDTO implements CSR3DTOInterface
      *
      * This property store the current traversing position of the DTO
      *
-     * @var integer
+     * @var                                        integer
+     * @SuppressWarnings(PHPMD.UnusedPrivateField)
      */
     private $traversingPosition = 0;
 }

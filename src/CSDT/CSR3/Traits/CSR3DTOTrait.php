@@ -201,7 +201,7 @@ trait CSR3DTOTrait
      *
      * This method return the current iterated key
      *
-     * @return void
+     * @return string
      */
     public function key()
     {

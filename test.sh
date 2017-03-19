@@ -16,6 +16,11 @@ TEST_RES=""
 
 PHP=$1
 
+function runner {
+    TEST_RES=`$1`
+    local TEST_RET=$?
+}
+
 function test {
     TEST_RES=`$1`
     local TEST_RET=$?
@@ -37,6 +42,9 @@ then
     mkdir -p "doc"
 fi
 
+runner "$PHP vendor/bin/phpcbf src/"
+echo "$TEST_RES" > doc/phpcbf.txt
+
 test "$PHP vendor/bin/phpunit" PHPUnit 100
 echo "$TEST_RES" > doc/phpunit.txt
 
@@ -52,6 +60,9 @@ echo "$TEST_RES" > doc/phpcpd.txt
 test "$PHP vendor/bin/sami.php update samiConfig.php" SAMI 1
 echo "$TEST_RES" > doc/phpcpd.txt
 
+runner "$PHP vendor/bin/phpcs src/"
+echo "$TEST_RES" > doc/phpcs_all.txt
+
 if [ "$STATUS" -eq 0 ]
 then
     echo -e "\n\e[42m"
@@ -62,7 +73,7 @@ then
     echo -e "\e[30mTHE STATUS IS UNSTABLE\n\e[0m\n\e[49m"
 else
     echo -e "\n\e[41m"
-    echo -e "\e[30mTHE STATUS IS UNSTABLE\n\e[0m\n\e[49m"
+    echo -e "\e[30mTHE STATUS IS FAILURE\n\e[0m\n\e[49m"
 fi
 
 exit $STATUS

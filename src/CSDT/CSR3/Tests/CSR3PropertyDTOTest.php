@@ -33,6 +33,15 @@ use CSDT\CSR3\Abstracts\AbstractCSR3PropertyDTO;
 class CSR3PropertyDTOTest extends CSR3GenericDTOTest
 {
     /**
+     * Reflex class
+     *
+     * This property store the class to be used for reflexion.
+     *
+     * @var string
+     */
+    protected $reflexClass;
+
+    /**
      * Array attributes provider
      *
      * This method return the data for the attribute tests
@@ -68,6 +77,7 @@ class CSR3PropertyDTOTest extends CSR3GenericDTOTest
     {
         $this->instance = new TestPropertyDTO();
         $this->masterClass = AbstractCSR3PropertyDTO::class;
+        $this->reflexClass = TestPropertyDTO::class;
     }
 
     /**
@@ -81,7 +91,7 @@ class CSR3PropertyDTOTest extends CSR3GenericDTOTest
      */
     protected function setIterationAttributes(array $attributes)
     {
-        $reflex = new \ReflectionClass(TestPropertyDTO::class);
+        $reflex = new \ReflectionClass($this->reflexClass);
 
         $innerAAttrProp = $reflex->getProperty('propertyA');
         $innerAAttrProp->setAccessible(true);
@@ -161,7 +171,7 @@ class CSR3PropertyDTOTest extends CSR3GenericDTOTest
 
         $this->instance[$attributeName] = $attributeValue;
 
-        $reflex = new \ReflectionClass(TestPropertyDTO::class);
+        $reflex = new \ReflectionClass($this->reflexClass);
         $innerAttrProp = $reflex->getProperty($attributeName);
 
         $innerAttrProp->setAccessible(true);

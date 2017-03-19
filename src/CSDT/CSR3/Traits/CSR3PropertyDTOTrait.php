@@ -62,9 +62,8 @@ trait CSR3PropertyDTOTrait
         string $attributeName,
         $attributeValue
     ): CSR3DTOInterface {
-        if (property_exists($this, $attributeName)) {
-            $this->$attributeName = $attributeValue;
-
+        if ($this->propertyExist($attributeName)) {
+            $this->setProperty($attributeName, $attributeValue);
             return $this;
         }
 
@@ -84,8 +83,8 @@ trait CSR3PropertyDTOTrait
      */
     public function getAttribute(string $attributeName)
     {
-        if (property_exists($this, $attributeName)) {
-            return $this->$attributeName;
+        if ($this->propertyExist($attributeName)) {
+            return $this->getProperty($attributeName);
         }
 
         if (isset($this[$attributeName])) {
@@ -107,11 +106,6 @@ trait CSR3PropertyDTOTrait
     public function setAttributes(array $attributes) : CSR3DTOInterface
     {
         foreach ($attributes as $attributeName => $attributeValue) {
-            if (property_exists($this, $attributeName)) {
-                $this->setAttribute($attributeName, $attributeValue);
-                continue;
-            }
-
             $this->setAttribute($attributeName, $attributeValue);
         }
 
@@ -128,19 +122,9 @@ trait CSR3PropertyDTOTrait
     public function getAttributes(): array
     {
         $attributes = $this->{$this->attributeContainer};
-        $validArray = [
-            $this->attributeContainer,
-            $this->positionContainer,
-            'attributeContainer',
-            'positionContainer',
-        ];
 
-        foreach (get_object_vars($this) as $propertyName => $propertyValue) {
-            if (in_array($propertyName, $validArray)) {
-                continue;
-            }
-
-            $attributes[$propertyName] = $propertyValue;
+        foreach ($this->getProperties() as $propertyName) {
+            $attributes[$propertyName] = $this->getProperty($propertyName);
         }
 
         return $attributes;
@@ -157,7 +141,7 @@ trait CSR3PropertyDTOTrait
      */
     public function offsetExists($offset) : bool
     {
-        if (property_exists($this, $offset)) {
+        if ($this->propertyExist($offset)) {
             return true;
         }
 
@@ -204,7 +188,7 @@ trait CSR3PropertyDTOTrait
      */
     public function offsetUnset($offset)
     {
-        if (property_exists($this, $offset)) {
+        if ($this->propertyExist($offset)) {
             $this->setAttribute($offset, null);
         }
 
@@ -240,7 +224,7 @@ trait CSR3PropertyDTOTrait
      *
      * This method return the current iterated key
      *
-     * @return void
+     * @return string
      */
     public function key()
     {
@@ -271,5 +255,128 @@ trait CSR3PropertyDTOTrait
     public function rewind()
     {
         $this->{$this->positionContainer} = 0;
+    }
+
+    /**
+     * Property exist
+     *
+     * This method validate that a given property name is part of the current class.
+     * This validation allow to the DTO to store a value direcly into an object
+     * property instead of the default storage array.
+     *
+     * @param string $propertyName The name of the property to check
+     *
+     * @return boolean
+     */
+    protected function propertyExist(string $propertyName) : bool
+    {
+        return in_array($propertyName, $this->getProperties());
+    }
+
+    /**
+     * Get properties
+     *
+     * This method return the existants properties of the current DTO object. It
+     * unset the attribute management properties to allow the only return  of
+     * storage properties.
+     *
+     * By overriding it you can specify any private properties that you want to use
+     * inside the final DTO object. This feature must be used with the override of
+     * the setProperty() method and getProperty() method.
+     *
+     * exemple :
+     * <pre>
+     * protected function getProperties()
+     * {
+     *      $privateArray = ['propA', 'propB'];
+     *
+     *      return array_merge(
+     *          parent::getProperties(),
+     *          $privateArray
+     *      );
+     * }
+     * </pre>
+     *
+     * @return array
+     */
+    protected function getProperties() : array
+    {
+        $invalidArray = [
+            $this->attributeContainer,
+            $this->positionContainer,
+            'attributeContainer',
+            'positionContainer',
+        ];
+
+        return array_diff(array_keys(get_class_vars(static::class)), $invalidArray);
+    }
+
+    /**
+     * Set property
+     *
+     * This method inject a value into an existing class property. This offer to the
+     * DTO to store a value into object properties since current attribute
+     * container.
+     *
+     * By overriding this method you can store a value into a private class
+     * property. This feature must be used in addition with the override of
+     * the getProperties() method and getProperty() method.
+     *
+     * exemple :
+     * <pre>
+     * protected function setProperty(string $propertyName, $propertyValue)
+     * {
+     *      if (in_array($propertyName, ['privatePropA', 'privatePropB'])) {
+     *          $method = 'set'.ucfirst($propertyName);
+     *          $this->$method($propertyValue);
+     *          return $this;
+     *      }
+     *
+     *      return parent::setProperty($propertyName, $propertyValue);
+     * }
+     * </pre>
+     *
+     * @param string $propertyName  The property name where inject the value
+     * @param mixed  $propertyValue The value to inject inside the property
+     *
+     * @return $this
+     */
+    protected function setProperty(string $propertyName, $propertyValue)
+    {
+        $this->{$propertyName} = $propertyValue;
+
+        return $this;
+    }
+
+    /**
+     * Get property
+     *
+     * This method return a value contained into any existing property of the
+     * current DTO.
+     *
+     * By overriding this method you can extract a value from a private class
+     * property. This feature must be used with the override of the getProperties()
+     * method and setProperty() method.
+     *
+     * exemple :
+     * <pre>
+     * protected function getProperty(string $propertyName)
+     * {
+     *      if (in_array($propertyName, ['privatePropA', 'privatePropB'])) {
+     *          $method = 'get'.ucfirst($propertyName);
+     *          return $this->$method();
+     *      }
+     *
+     *      return parent::getProperty($propertyName);
+     * }
+     * </pre>
+     *
+     * @param string $propertyName The property whence extract the value
+     *
+     * @return mixed
+     */
+    protected function getProperty(string $propertyName)
+    {
+        return $this->{$propertyName};
     }
 }

@@ -4,3 +4,5 @@
 .settings/
 composer.lock
 doc/
+cacheDocAPI/
+docAPI/
