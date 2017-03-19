@@ -37,7 +37,7 @@
     "namespace": "CSDT\\CSR3\\Traits",
     "file": "\/home\/workspace\/ToolDivision\/CSR3\/src\/CSDT\/CSR3\/Traits\/CSR3PropertyDTOTrait.php",
     "relative_file": null,
-    "hash": "cd1af17d6ddf1e2456f96d1c1d3b1d0449e5bd00",
+    "hash": "fcc33dbd99f7ee5402a68d7ae9a047fb606b13e5",
     "parent": null,
     "modifiers": null,
     "is_trait": true,
@@ -155,7 +155,7 @@
         },
         "getAttribute": {
             "name": "getAttribute",
-            "line": 85,
+            "line": 84,
             "short_desc": "Get attribute",
             "long_desc": "This method allow to retreive a value from a named attribute of the DTO",
             "hint": [
@@ -173,7 +173,7 @@
             "parameters": {
                 "attributeName": {
                     "name": "attributeName",
-                    "line": 85,
+                    "line": 84,
                     "short_desc": "The name of the attribute whence return the value",
                     "long_desc": null,
                     "hint": [
@@ -191,7 +191,7 @@
         },
         "setAttributes": {
             "name": "setAttributes",
-            "line": 107,
+            "line": 106,
             "short_desc": "Set attributes",
             "long_desc": "This method allow to set the attributes of the DTO from an associative array",
             "hint": [
@@ -209,7 +209,7 @@
             "parameters": {
                 "attributes": {
                     "name": "attributes",
-                    "line": 107,
+                    "line": 106,
                     "short_desc": "The associative array of attributes",
                     "long_desc": null,
                     "hint": [
@@ -227,7 +227,7 @@
         },
         "getAttributes": {
             "name": "getAttributes",
-            "line": 128,
+            "line": 122,
             "short_desc": "Get attributes",
             "long_desc": "This method return the attributes as array from the DTO",
             "hint": [
@@ -246,7 +246,7 @@
         },
         "offsetExists": {
             "name": "offsetExists",
-            "line": 158,
+            "line": 142,
             "short_desc": "Offset exist",
             "long_desc": "This method validate the existence of an offset",
             "hint": [
@@ -264,7 +264,7 @@
             "parameters": {
                 "offset": {
                     "name": "offset",
-                    "line": 158,
+                    "line": 142,
                     "short_desc": "The offset to validate",
                     "long_desc": null,
                     "hint": [
@@ -282,7 +282,7 @@
         },
         "offsetGet": {
             "name": "offsetGet",
-            "line": 176,
+            "line": 160,
             "short_desc": "Offset get",
             "long_desc": "This method return an offset value",
             "hint": [
@@ -300,7 +300,7 @@
             "parameters": {
                 "offset": {
                     "name": "offset",
-                    "line": 176,
+                    "line": 160,
                     "short_desc": "The offset whence retreive the value",
                     "long_desc": null,
                     "hint": [
@@ -318,7 +318,7 @@
         },
         "offsetSet": {
             "name": "offsetSet",
-            "line": 191,
+            "line": 175,
             "short_desc": "Offset set",
             "long_desc": "This method allow to set a value at an offset place",
             "hint": [
@@ -336,7 +336,7 @@
             "parameters": {
                 "offset": {
                     "name": "offset",
-                    "line": 191,
+                    "line": 175,
                     "short_desc": "The offset where set the value",
                     "long_desc": null,
                     "hint": [
@@ -352,7 +352,7 @@
                 },
                 "value": {
                     "name": "value",
-                    "line": 191,
+                    "line": 175,
                     "short_desc": "The value to inject",
                     "long_desc": null,
                     "hint": [
@@ -370,7 +370,7 @@
         },
         "offsetUnset": {
             "name": "offsetUnset",
-            "line": 205,
+            "line": 189,
             "short_desc": "Offset unset",
             "long_desc": "This method remove an offset",
             "hint": [
@@ -388,7 +388,7 @@
             "parameters": {
                 "offset": {
                     "name": "offset",
-                    "line": 205,
+                    "line": 189,
                     "short_desc": "The offset to remove",
                     "long_desc": null,
                     "hint": [
@@ -406,7 +406,7 @@
         },
         "current": {
             "name": "current",
-            "line": 221,
+            "line": 205,
             "short_desc": "Current",
             "long_desc": "This method return the current iterated value",
             "hint": [
@@ -425,7 +425,7 @@
         },
         "next": {
             "name": "next",
-            "line": 233,
+            "line": 217,
             "short_desc": "Next",
             "long_desc": "This method advance the internal pointer by one step",
             "hint": [
@@ -444,12 +444,12 @@
         },
         "key": {
             "name": "key",
-            "line": 245,
+            "line": 229,
             "short_desc": "Key",
             "long_desc": "This method return the current iterated key",
             "hint": [
                 [
-                    "void",
+                    "string",
                     false
                 ]
             ],
@@ -463,7 +463,7 @@
         },
         "valid": {
             "name": "valid",
-            "line": 257,
+            "line": 241,
             "short_desc": "Valid",
             "long_desc": "This method validate the current internal position existence",
             "hint": [
@@ -482,7 +482,7 @@
         },
         "rewind": {
             "name": "rewind",
-            "line": 271,
+            "line": 255,
             "short_desc": "Rewind",
             "long_desc": "This method reinitialize the internal position",
             "hint": [
@@ -498,6 +498,149 @@
             "exceptions": [],
             "errors": [],
             "parameters": []
+        },
+        "propertyExist": {
+            "name": "propertyExist",
+            "line": 271,
+            "short_desc": "Property exist",
+            "long_desc": "This method validate that a given property name is part of the current class.\nThis validation allow to the DTO to store a value direcly into an object\nproperty instead of the default storage array.",
+            "hint": [
+                [
+                    "boolean",
+                    false
+                ]
+            ],
+            "hint_desc": "",
+            "tags": [],
+            "modifiers": 2,
+            "is_by_ref": "",
+            "exceptions": [],
+            "errors": [],
+            "parameters": {
+                "propertyName": {
+                    "name": "propertyName",
+                    "line": 271,
+                    "short_desc": "The name of the property to check",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "string",
+                            false
+                        ]
+                    ],
+                    "tags": [],
+                    "modifiers": "string",
+                    "default": null,
+                    "is_by_ref": false
+                }
+            }
+        },
+        "getProperties": {
+            "name": "getProperties",
+            "line": 302,
+            "short_desc": "Get properties",
+            "long_desc": "This method return the existants properties of the current DTO object. It\nunset the attribute management properties to allow the only return  of\nstorage properties.\n\nBy overriding it you can specify any private properties that you want to use\ninside the final DTO object. This feature must be used with the override of\nthe setProperty() method and getProperty() method.\n\nexemple :\n<pre>\nprotected function getProperties()\n{\n     $privateArray = ['propA', 'propB'];\n\n     return array_merge(\n         parent::getProperties(),\n         $privateArray\n     );\n}\n<\/pre>",
+            "hint": [
+                [
+                    "array",
+                    false
+                ]
+            ],
+            "hint_desc": "",
+            "tags": [],
+            "modifiers": 2,
+            "is_by_ref": "",
+            "exceptions": [],
+            "errors": [],
+            "parameters": []
+        },
+        "setProperty": {
+            "name": "setProperty",
+            "line": 344,
+            "short_desc": "Set property",
+            "long_desc": "This method inject a value into an existing class property. This offer to the\nDTO to store a value into object properties since current attribute\ncontainer.\n\nBy overriding this method you can store a value into a private class\nproperty. This feature must be used in addition with the override of\nthe getProperties() method and getProperty() method.\n\nexemple :\n<pre>\nprotected function setProperty(string $propertyName, $propertyValue)\n{\n     if (in_array($propertyName, ['privatePropA', 'privatePropB'])) {\n         $method = 'set'.ucfirst($propertyName);\n         $this->$method($propertyValue);\n         return $this;\n     }\n\n     return parent::setProperty($propertyName, $propertyValue);\n}\n<\/pre>",
+            "hint": [
+                [
+                    "CSDT\\CSR3\\Traits\\$this",
+                    false
+                ]
+            ],
+            "hint_desc": "",
+            "tags": [],
+            "modifiers": 2,
+            "is_by_ref": "",
+            "exceptions": [],
+            "errors": [],
+            "parameters": {
+                "propertyName": {
+                    "name": "propertyName",
+                    "line": 344,
+                    "short_desc": "The property name where inject the value",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "string",
+                            false
+                        ]
+                    ],
+                    "tags": [],
+                    "modifiers": "string",
+                    "default": null,
+                    "is_by_ref": false
+                },
+                "propertyValue": {
+                    "name": "propertyValue",
+                    "line": 344,
+                    "short_desc": "The value to inject inside the property",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "mixed",
+                            false
+                        ]
+                    ],
+                    "tags": [],
+                    "modifiers": null,
+                    "default": null,
+                    "is_by_ref": false
+                }
+            }
+        },
+        "getProperty": {
+            "name": "getProperty",
+            "line": 378,
+            "short_desc": "Get property",
+            "long_desc": "This method return a value contained into any existing property of the\ncurrent DTO.\n\nBy overriding this method you can extract a value from a private class\nproperty. This feature must be used with the override of the getProperties()\nmethod and setProperty() method.\n\nexemple :\n<pre>\nprotected function getProperty(string $propertyName)\n{\n     if (in_array($propertyName, ['privatePropA', 'privatePropB'])) {\n         $method = 'get'.ucfirst($propertyName);\n         return $this->$method();\n     }\n\n     return parent::getProperty($propertyName);\n}\n<\/pre>",
+            "hint": [
+                [
+                    "mixed",
+                    false
+                ]
+            ],
+            "hint_desc": "",
+            "tags": [],
+            "modifiers": 2,
+            "is_by_ref": "",
+            "exceptions": [],
+            "errors": [],
+            "parameters": {
+                "propertyName": {
+                    "name": "propertyName",
+                    "line": 378,
+                    "short_desc": "The property whence extract the value",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "string",
+                            false
+                        ]
+                    ],
+                    "tags": [],
+                    "modifiers": "string",
+                    "default": null,
+                    "is_by_ref": false
+                }
+            }
         }
     },
     "constants": []

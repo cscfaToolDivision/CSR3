@@ -37,7 +37,7 @@
     "namespace": "CSDT\\CSR3\\Traits",
     "file": "\/home\/workspace\/ToolDivision\/CSR3\/src\/CSDT\/CSR3\/Traits\/CSR3DTOTrait.php",
     "relative_file": null,
-    "hash": "d096be8b3b84e917a29145d9822e7e1ed55504d6",
+    "hash": "21cdc556d30cbd5268e43d75b49dd2803c34e1f5",
     "parent": null,
     "modifiers": null,
     "is_trait": true,
@@ -449,7 +449,7 @@
             "long_desc": "This method return the current iterated key",
             "hint": [
                 [
-                    "void",
+                    "string",
                     false
                 ]
             ],
