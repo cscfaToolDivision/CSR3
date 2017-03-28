@@ -4,6 +4,8 @@ This project is the PHP implementation of the **[csr3 specification](https://git
 
 The data transfer objects are elements used to encapsulate the data when they must go through multiple elements of an application. The DTO acts as a container.
 
+[![SensioLabsInsight](https://insight.sensiolabs.com/projects/904a363e-f5bd-4fd4-a5c3-18ef2e523d13/big.png)](https://insight.sensiolabs.com/projects/904a363e-f5bd-4fd4-a5c3-18ef2e523d13)
+
 ## Basic usage
 
 The CSR3 project define a generic DTO object :
